@@ -1,0 +1,36 @@
+{
+	"name": "@andikamc/deasync",
+	"version": "1.0.0",
+	"description": "Turns async code into sync via JavaScript wrapper of Node event loop, support both callback and promise",
+	"author": "MC4ND",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/andikamc/deasync.git"
+	},
+	"homepage": "https://github.com/andikamc/deasync",
+	"engines": {
+		"node": ">=20"
+	},
+	"main": "index.js",
+	"types": "index.d.ts",
+	"files": [
+		"binding.gyp",
+		"src",
+		"script",
+		"index.js",
+		"index.d.ts"
+	],
+	"scripts": {
+		"install": "node script/prebuild.js install",
+		"compile:ts": "tsc"
+	},
+	"dependencies": {
+		"follow-redirects": "^1.15.6",
+		"tar-fs": "^3.0.6"
+	},
+	"devDependencies": {
+		"ts-node": "^10.9.2",
+		"typescript": "^5.4.5"
+	}
+}
