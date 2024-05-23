@@ -18,8 +18,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          cache: npm
-          node-version: latest
+          node-version: 20
 
       - name: Install node-gyp
         run: npm install -g node-gyp
