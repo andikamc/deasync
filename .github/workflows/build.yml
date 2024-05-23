@@ -16,19 +16,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v3
-        with:
-          version: latest
-
       - uses: actions/setup-node@v4
         with:
-          cache: pnpm
+          cache: npm
           node-version: latest
 
       - name: Install node-gyp
-        run: pnpm add -g node-gyp
+        run: npm install -g node-gyp
 
-      - run: pnpm install
+      - run: npm install
         env:
           NO_PREBUILD: true
 
